@@ -11,7 +11,7 @@ class Triplica < Sinatra::Base
     set :public_folder, "app/public"
 
     enable :sessions
-    set :session_secret, "secret!"
+    set :session_secret, ENV["SECRET_TOKEN"] || "secret!"
 
     register Sinatra::ActiveRecordExtension
     register Sinatra::Flash
