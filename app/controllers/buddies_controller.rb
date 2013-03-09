@@ -8,16 +8,16 @@ class Triplica < Sinatra::Base
 
   post "/buddies/new" do
     buddy = UserRepository.find_by_username(params[:buddy])
-    if current_user.buddy_one.nil?
+    if buddy and current_user.buddy_one.nil?
       current_user.buddy_one = buddy
       flash[:succes] = "Added #{buddy} as your buddy."
       halt redirect to("/feed")
-    elsif current_user.buddy_two.nil?
+    elsif buddy and current_user.buddy_two.nil?
       current_user.buddy_two = buddy
       flash[:succes] = "Added #{buddy} as your buddy."
       halt redirect to("/feed")
     else
-      flash[:error] = "Something went wrong :("
+      flash.now[:error] = "Something went wrong :("
       @potential_buddies = get_potential_buddies
       haml :"/buddies/new"
     end

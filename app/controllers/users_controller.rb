@@ -11,6 +11,7 @@ class Triplica < Sinatra::Base
     if params[:secret] == "bacon"
       @user = User.new(params[:user])
       if @user.save
+        session[:user_id] = @user.id
         flash[:notice] = "Signed up!"
         redirect to("/")
       else

@@ -5,7 +5,7 @@
 
 %form{method: :post, action: "/videos/new"}
   %p
-    %label{for: :username} Url
+    %label{for: :username} YouTube URL
     %input{name: "url", id: :username, type: :text, value: "#{@video.url}"}
 
   %input{type: :submit, value: "Add", class: "btn btn-primary"}
