@@ -1,0 +1,8 @@
+- if current_user
+  .row-fluid
+    = render partial: :video_column, locals: { user: @left_user}
+    = render partial: :video_column, locals: { user: @middle_user}
+    = render partial: :video_column, locals: { user: @right_user}
+
+- else
+  asdf

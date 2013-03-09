@@ -1,0 +1,8 @@
+%h1 Alright, let's add a new buddy.
+
+%form{method: :post, action: "/buddies/new"}
+  %p
+    %label{for: :buddy} What's your buddy's username?
+    %input{name: "buddy", id: :buddy, type: :text, placeholder: "Start typing...", "data-provide" => "typeahead", "data-items" => 4, "data-source" => "#{@potential_buddies}"}
+
+  %input{type: :submit, value: "Add", class: "btn btn-primary"}

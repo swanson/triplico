@@ -1,0 +1,19 @@
+%h1 Sign up
+%form{method: :post, id: :login, action: "/signup"}
+  %p
+    %label{for: :secret} Beta Code
+    %input{name: "secret", id: :secret, type: :text}
+
+  %p
+    %label{for: :username} Username
+    %input{name: "user[username]", id: :username, type: :text}
+
+  %p
+    %label{for: :password} Password
+    %input{name: "user[password]", id: :password, type: :password}
+
+  %p
+    %label{for: :confirm_password} Confirm Password
+    %input{name: "user[password_confirmation]", id: :confirm_password, type: :password}
+
+  %input{type: :submit, value: "Sign Up", class: "btn btn-primary"}

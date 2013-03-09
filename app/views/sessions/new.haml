@@ -1,0 +1,13 @@
+%h1 Log in
+%form{method: :post, id: :login, action: "/login"}
+  .control-group
+    %label{for: :username} Username
+    %input{name: :username, id: :username, type: :text,}
+
+  .control-group
+    %label{for: :password} Password
+    %input{name: :password, id: :password, type: :password}
+
+  %input{type: :submit, value: "Login", class: "btn btn-primary"}
+  or 
+  %a{href: "/signup"} Sign up

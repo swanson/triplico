@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %link(rel="stylesheet" href="/css/bootstrap.min.css")
+    %link(rel="stylesheet" href="/css/flat-ui.css")
+    %link(rel="stylesheet" href="/css/styles.css")
+
+    %script{:type => "text/javascript",
+            :src  => "/js/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "/js/bootstrap-typeahead.js"}
+  %body
+    #wrap
+      #flash
+        = render partial: :flash
+      .container
+        = render partial: :menu
+          
+        = yield
+      #push
+
+    = render partial: :footer

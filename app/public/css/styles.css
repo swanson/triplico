@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+  background: white;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+  height: 60px;
+}
+
+#flash {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#flash .alert {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+#logo {
+  font-size: 48px;
+  line-height: 24px;
+  letter-spacing: -8px;
+  font-weight: bold;
+}
+
+.logo_link {
+  text-decoration: none;
+}
+
+#logo .one {
+  color: #16A085;
+}
+
+#logo .two {
+  color: #2980B9;
+}
+
+#logo .three {
+  color: #2C3E50;
+}
+
+#menu {
+  padding: 10px;
+}
+
+.featured, .others img {
+  padding-bottom: 2px;
+}
+
+h2.column_title {
+  text-align: center;
+}
+
+.buddy {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.buddy i {
+  font-size: 48px;
+}
+
+.buddy a i {
+  font-size: 12px;
+}
+
+.buddy .tile {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.buddy .tile p {
+  margin-bottom: 0px;
+}
+
+.no-vids {
+  text-align: center;
+}

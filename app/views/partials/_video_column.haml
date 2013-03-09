@@ -1,0 +1,28 @@
+.span4
+  - if user
+    %h2{class: :column_title}= user.username
+    .buddy-column
+      - unless user.videos.empty?
+        .featured
+          = YoutubeHelper.featured(user.videos.pop.url)
+
+        .others
+          - user.videos.each do |video|
+            = YoutubeHelper.thumb(video.url)
+      - else
+        .no-vids
+          %p
+            You've got no videos!
+          %p
+            %a{href: "/videos/new", class: "btn btn-primary"}
+              Add Video
+  - else
+    %h2 &nbsp;
+    .buddy-column
+      .buddy
+        .tile
+          %p
+            %i{class: "fui-man-24"}
+          %a{href: "/buddies/new", class: "btn"}
+            %i{class: "fui-plus-24"}
+            Buddy

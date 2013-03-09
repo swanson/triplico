@@ -1,0 +1,11 @@
+%h1 
+  Hey 
+  = current_user.username
+  , what are you watching?
+
+%form{method: :post, action: "/videos/new"}
+  %p
+    %label{for: :username} Url
+    %input{name: "url", id: :username, type: :text, value: "#{@video.url}"}
+
+  %input{type: :submit, value: "Add", class: "btn btn-primary"}

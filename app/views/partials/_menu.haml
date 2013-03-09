@@ -1,0 +1,15 @@
+#menu.row-fluid
+  .pull-left
+    %a{href: "/", class: :logo_link}
+      #logo
+        %span{class: :three}t
+        %span{class: :two}t
+        %span{class: :one}t
+
+  - if current_user
+    .pull-right
+      .btn-group
+        %a{href: "/videos/new", class: "btn btn-primary"}
+          Add Video
+        %a{href: "/logout", class: "btn btn-primary"}
+          Logout
