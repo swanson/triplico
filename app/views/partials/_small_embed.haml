@@ -1,0 +1,4 @@
+%a{href: "#yt-#{video_id}", "data-toggle" => :modal}
+  = YoutubeHelper.thumb(video_url)
+%div{id: "yt-#{video_id}", class: "modal hide popup", role: :dialog, "data-backdrop" => :static}
+  = YoutubeHelper.embed(video_url)

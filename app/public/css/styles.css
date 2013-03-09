@@ -136,3 +136,24 @@ h2.column_title {
 .no-vids {
   text-align: center;
 }
+
+.popup {
+  background: #34495E;
+  width: 960px;
+  border: none;
+  padding: 10px;
+}
+
+.modal {
+  margin-left: -485px;
+}
+
+.modal-backdrop {
+  background: #2C3E50;
+}
+
+.modal .top-tab {
+  position: absolute;
+  top: 10px;
+  right: -46px;
+}

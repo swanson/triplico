@@ -1,0 +1,19 @@
+%a{href: "#yt-#{video_id}", "data-toggle" => :modal}
+  = YoutubeHelper.featured(video_url)
+%div{id: "yt-#{video_id}", class: "modal hide popup", role: :dialog, "data-backdrop" => :static}
+  .pull-right
+    .btn-toolbar.top-tab
+      .btn-group
+        %a{class: "btn btn-primary", id: "dismiss-#{video_id}", href: "#", "data-dismiss" => :modal}
+          %i{class: "fui-cross-16"}
+
+  = YoutubeHelper.embed(video_url)
+
+:javascript
+  $("#dismiss-#{video_id}").click(function(e) {
+    $("#ytplayer-#{video_id}")[0].contentWindow.postMessage(
+      JSON.stringify({
+        "event": "command",
+        "func": "pauseVideo",
+        }), "*");
+  });
