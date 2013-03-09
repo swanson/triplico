@@ -1,6 +1,6 @@
 #tripli.co
 
-A video sharing app for groups of three people.
+A video sharing app for groups of three.
 
 Built with Sinatra, ActiveRecord, Bootstrap and Flat-UI.
 
